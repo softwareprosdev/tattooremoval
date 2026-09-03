@@ -8,7 +8,7 @@ export function Container({
 }: {
   className?: string;
   children: ReactNode;
-  as?: ElementType;
+  as?: ElementType<{ className?: string; children?: ReactNode }>;
 }) {
   return <Tag className={cn("container", className)}>{children}</Tag>;
 }

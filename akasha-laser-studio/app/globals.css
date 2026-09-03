@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+
+  * {
+    @apply border-champagne-300/60;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+
+  body {
+    @apply bg-ivory text-charcoal-400 antialiased;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-serif font-medium tracking-tight text-charcoal-500;
+  }
+
+  a {
+    @apply underline-offset-4;
+  }
+
+  /* Visible, elegant focus ring for keyboard navigation */
+  :focus-visible {
+    outline: 2px solid theme("colors.laser.deep");
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  ::selection {
+    background-color: theme("colors.champagne.300");
+    color: theme("colors.charcoal.500");
+  }
+}
+
+@layer components {
+  .eyebrow {
+    @apply inline-flex items-center gap-2 text-xs font-sans font-semibold uppercase tracking-widest2 text-taupe-400;
+  }
+
+  .section-py {
+    @apply py-20 sm:py-28;
+  }
+
+  .prose-body {
+    @apply text-base leading-relaxed text-charcoal-100 sm:text-lg;
+  }
+
+  .glass-panel {
+    @apply border border-champagne-300/70 bg-ivory-100/80 backdrop-blur-sm;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}

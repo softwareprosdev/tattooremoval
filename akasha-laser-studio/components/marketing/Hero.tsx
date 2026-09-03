@@ -5,16 +5,20 @@ import { Phone } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 import { Scene3D } from "@/components/3d/Scene3D";
+import { AmbientBokeh } from "@/components/marketing/AmbientBokeh";
+import { BotanicalAccent } from "@/components/marketing/BotanicalAccent";
 import { business } from "@/lib/config/business";
 import { trackEvent, ANALYTICS_EVENTS } from "@/lib/analytics/events";
 
 export function Hero() {
   return (
-    <section className="relative flex min-h-[92vh] items-center overflow-hidden bg-obsidian">
+    <section className="relative flex min-h-[92vh] items-center overflow-hidden bg-gradient-to-br from-charcoal-500 via-obsidian to-obsidian">
+      <AmbientBokeh />
       <div className="absolute inset-0">
         <Scene3D kind="hero" className="h-full w-full" />
       </div>
       <div className="absolute inset-0 bg-gradient-to-t from-obsidian via-obsidian/40 to-obsidian/10" />
+      <BotanicalAccent className="pointer-events-none absolute -bottom-6 -left-6 hidden h-48 w-auto opacity-80 sm:block lg:h-56" />
 
       <Container className="relative z-10 py-32 sm:py-40">
         <motion.div

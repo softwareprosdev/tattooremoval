@@ -21,8 +21,7 @@ export function WebGLFallback({
       aria-hidden="true"
     >
       <div className="absolute inset-0 opacity-70">
-        <div className="absolute left-1/2 top-1/2 h-[140%] w-px -translate-x-1/2 -translate-y-1/2 rotate-12 bg-gradient-to-b from-transparent via-laser/70 to-transparent blur-[2px]" />
-        <div className="absolute left-1/2 top-1/2 h-[120%] w-[2px] -translate-x-1/2 -translate-y-1/2 -rotate-6 bg-gradient-to-b from-transparent via-laser-glow/40 to-transparent blur-[3px]" />
+        <div className="absolute left-1/2 top-1/2 h-[150%] w-px -translate-x-1/2 -translate-y-1/2 rotate-[25deg] bg-gradient-to-b from-transparent via-laser/80 to-transparent blur-[2px]" />
       </div>
       <div className="absolute left-1/2 top-1/2 h-64 w-64 -translate-x-1/2 -translate-y-1/2 rounded-full bg-laser/20 blur-3xl" />
       <div className="absolute left-1/2 top-1/2 h-32 w-32 -translate-x-1/2 -translate-y-1/2 rounded-full bg-laser-glow/30 blur-2xl" />

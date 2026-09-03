@@ -93,10 +93,25 @@ const config: Config = {
           "0%": { backgroundPosition: "0% 50%" },
           "100%": { backgroundPosition: "200% 50%" },
         },
+        "drift-a": {
+          "0%, 100%": { transform: "translate(0, 0) scale(1)" },
+          "50%": { transform: "translate(2rem, -1.5rem) scale(1.08)" },
+        },
+        "drift-b": {
+          "0%, 100%": { transform: "translate(0, 0) scale(1)" },
+          "50%": { transform: "translate(-1.5rem, 2rem) scale(1.05)" },
+        },
+        "drift-c": {
+          "0%, 100%": { transform: "translate(0, 0) scale(1)" },
+          "50%": { transform: "translate(1.25rem, 1.25rem) scale(0.95)" },
+        },
       },
       animation: {
         "fade-up": "fade-up 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards",
         shimmer: "shimmer 3s linear infinite",
+        "drift-a": "drift-a 18s ease-in-out infinite",
+        "drift-b": "drift-b 22s ease-in-out infinite",
+        "drift-c": "drift-c 26s ease-in-out infinite",
       },
       transitionTimingFunction: {
         premium: "cubic-bezier(0.22, 1, 0.36, 1)",

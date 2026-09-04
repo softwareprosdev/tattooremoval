@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { Sparkles, ScanFace, Syringe, Zap } from "lucide-react";
 import { Container } from "@/components/ui/Container";
@@ -75,7 +76,13 @@ export default function HomePage() {
             </div>
           </div>
           <div className="relative aspect-square overflow-hidden rounded-sm">
-            <Scene3D kind="hero" className="h-full w-full" />
+            <Image
+              src="/images/technology-treatment.jpg"
+              alt="Laser tattoo removal handpiece treating a client's back"
+              fill
+              sizes="(min-width: 1024px) 50vw, 100vw"
+              className="object-cover object-[65%_40%]"
+            />
           </div>
         </Container>
       </section>

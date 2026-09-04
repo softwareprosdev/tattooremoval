@@ -50,18 +50,14 @@ function Scene({ reduced }: { reduced: boolean }) {
 
       <LaserBeam
         color="#7FDBD4"
-        rotation={[0, 0, Math.PI / 6]}
-        length={7}
+        rotation={[0, 0, Math.PI / 7]}
+        length={7.5}
         radius={0.01}
+        sweep={reduced ? 0 : 0.9}
+        sweepSpeed={0.11}
+        hotspot={!reduced}
+        animate={!reduced}
       />
-      {!reduced ? (
-        <LaserBeam
-          color="#D9C7A6"
-          rotation={[0, 0, -Math.PI / 8]}
-          length={7}
-          radius={0.006}
-        />
-      ) : null}
 
       <ParticleField
         count={reduced ? 120 : 320}

@@ -13,6 +13,7 @@ import { LocationCard } from "@/components/marketing/LocationCard";
 import { InstagramGallery } from "@/components/marketing/InstagramGallery";
 import { TestimonialSection } from "@/components/marketing/TestimonialCard";
 import { FAQAccordion } from "@/components/marketing/FAQAccordion";
+import { Scene3D } from "@/components/3d/Scene3D";
 import { business } from "@/lib/config/business";
 import { HOME_FAQS } from "@/lib/config/faq";
 
@@ -140,13 +141,7 @@ export default function HomePage() {
             </div>
           </div>
           <div className="order-1 aspect-square overflow-hidden rounded-sm lg:order-2">
-            <Image
-              src="/images/technology-treatment.jpg"
-              alt="Laser treatment handpiece in use during a session"
-              fill
-              sizes="(min-width: 1024px) 50vw, 100vw"
-              className="object-cover object-[40%_60%]"
-            />
+            <Scene3D kind="pmu" className="h-full w-full" />
           </div>
         </Container>
       </section>
